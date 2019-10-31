@@ -7,9 +7,7 @@ Welcome to Makeblock-Rover-docs's documentation!
 ================================================
 
 .. toctree::
-   :caption: Table of Contents
    :maxdepth: 2
-   
    Installation.rst
    Structure.rst
    readytostart.rst
