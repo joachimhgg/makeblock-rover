@@ -1,2 +1,8 @@
-Structure
+The Rover
 *********
+
+Introduction
+============
+
+Structure
+=========
