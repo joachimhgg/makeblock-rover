@@ -1,10 +1,10 @@
 Installation
-============
+************
 
 To install the environment on your Raspberry Pi, it's really simple.
 
 Requirement
-###########
+===========
 
 * a computer with an SD slot or equivalent.
 * **Raspberry Pi 2 or higher** (the ISO has been testing with Raspberry Pi 3B+)
@@ -12,7 +12,7 @@ Requirement
 * **8 Gb SD card minimum** (but at least 16 GB is recommanded)
 
 Installation steps
-##################
+==================
 
 1. Download the `ISO file`_ in the github project.
   .. _ISO file: https://github.com/joachimhgg/makeblock-rover

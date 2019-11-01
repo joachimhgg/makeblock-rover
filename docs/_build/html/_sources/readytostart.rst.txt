@@ -1,2 +1,20 @@
-Ready-to-start
+Presentation
 ==============
+
+Installed :
+Ubuntu Mate 16.04
+ROS Kinetic
+git
+Arduino + Makeblock librairies (open port access + choose Mega 2560 board)
+ros-kinetic-rosserial-arduino
+ros-kinetic-rosserial
+ros-kinetic-usb-cam
+ros-kinetic-web-video-server
+gedit
+
+python :
+on cv environnment :
+
+pip-19.2.3
+virtualenvwrapper
+py3cv4 environment with numpy, open-cv 3.1.1
