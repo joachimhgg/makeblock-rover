@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Tools &amp; Software &#8212; Makeblock-Rover-docs 0.0.1 documentation</title>
+    <title>Tools &amp; Softwares &#8212; Makeblock-Rover-docs 0.0.1 documentation</title>
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
@@ -40,30 +40,101 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="tools-software">
-<h1>Tools &amp; Software<a class="headerlink" href="#tools-software" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="what-is-installed-in-the-environment">
-<h2>What is installed in the environment ?<a class="headerlink" href="#what-is-installed-in-the-environment" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="installed">
-<h3>Installed :<a class="headerlink" href="#installed" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="tools-softwares">
+<h1>Tools &amp; Softwares<a class="headerlink" href="#tools-softwares" title="Permalink to this headline">¶</a></h1>
+<p>In order to give you a ready-to-start RPI environment for Education, some packages has been installed to start without the needs to spend long time of installation.</p>
+<div class="section" id="tools-and-packages-installed">
+<h2>Tools and packages installed<a class="headerlink" href="#tools-and-packages-installed" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Ubuntu Mate 16.04</p></li>
-<li><p>ROS Kinetic</p></li>
-<li><p>git</p></li>
 <li><p>Arduino with Makeblock librairies (open port access + choose Mega 2560 board)</p></li>
-<li><p>ros-kinetic-rosserial-arduino</p></li>
-<li><p>ros-kinetic-rosserial</p></li>
-<li><p>ros-kinetic-usb-cam</p></li>
-<li><p>ros-kinetic-web-video-server</p></li>
-<li><p>gedit</p></li>
+<li><p>Python 2.7 and 3.5</p></li>
+<li><p>ROS Kinetic</p></li>
+<li><p>Ros-kinetic-rosserial-arduino</p></li>
+<li><p>Ros-kinetic-rosserial</p></li>
+<li><p>Ros-kinetic-usb-cam</p></li>
+<li><p>Ros-kinetic-web-video-server</p></li>
+<li><p>Gedit</p></li>
+<li><p>Git</p></li>
+<li><p>Scratch</p></li>
+<li><p>…</p></li>
 </ul>
-<p>python :</p>
-<p>I recommend you to create a virtual environment for each python projects.</p>
-<p>on cv environnment :</p>
-<p>pip-19.2.3
-virtualenvwrapper
-py3cv4 environment with numpy, open-cv 3.1.1</p>
 </div>
+<div class="section" id="working-in-ssh">
+<span id="refssh"></span><h2>Working in SSH<a class="headerlink" href="#working-in-ssh" title="Permalink to this headline">¶</a></h2>
+<p>You can work on SSH from your linux PC. For that,</p>
+<ol class="arabic simple">
+<li><p>Open a terminal on RPI and write:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Makeblock@makeblock:~$ hostname -I
+</pre></div>
+</div>
+<p>That’s give you the IP of your RPI.</p>
+<ol class="arabic simple" start="2">
+<li><p>open a terminal from your PC and write :</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh makeblock@IPofraspberrypi
+</pre></div>
+</div>
+<p>or to be able to open graphics interfaces :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
+</pre></div>
+</div>
+</div>
+<div class="section" id="realising-projects-in-arduino-c">
+<h2>Realising projects in Arduino C<a class="headerlink" href="#realising-projects-in-arduino-c" title="Permalink to this headline">¶</a></h2>
+<p>Arduino IDE is installed with Makeblock librairies. So, you can start by code your first project using the IDE in Arduino C !
+Each time you want to experiment a new Makeblock sensor, you should open an Arduino IDE and try the examples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">insert arduino IDE image</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</div>
+<div class="section" id="realising-projects-in-python">
+<h2>Realising projects in Python<a class="headerlink" href="#realising-projects-in-python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="configure-a-python-virtual-environment">
+<span id="refpyenv"></span><h3>Configure a Python virtual environment<a class="headerlink" href="#configure-a-python-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>I recommend you to create a virtual environment for each python projects.
+If you aren’t familiar with virtual environments, please take a moment look at <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">this article</a> on RealPython.</p>
+<p>You should use virtualenvwrapper cause this package purposes simple commands to use virtual environment.
+To create an virtual environment, open a terminal (CTRL+ALT+T) and launch:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">myproject</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span>
+</pre></div>
+</div>
+<p>You can (and should) name your environment(s) whatever you’d like.</p>
+<p>Then you can use workon, the workon command is part of the virtualenvwrapper package
+and allows us to easily activate virtual environments.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">myproject</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">insert workon terminal image</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<p>and if you want to go out your environment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>Finaly you can install your project’s packages and launch your .py file in this isolate emvironment:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>(myproject) makeblock@makeblock:~ $ pip install numpy
+(myproject) makeblock@makeblock:~ $  python myprojectExample.py
+</pre></div>
+</div>
+<p><strong>Notes :</strong></p>
+<ul class="simple">
+<li><p>environments are created in ~/.virtualenvs</p></li>
+<li><p>if you want to remove an environment you can write <code class="docutils literal notranslate"><span class="pre">rmvirtualenv</span> <span class="pre">ENVNAME</span></code></p></li>
+<li><p>check other commands on the <a class="reference external" href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html">virtualenwrapper documentation</a></p></li>
+</ul>
+</div>
+<div class="section" id="interfacing-between-python-and-makeblock-boards">
+<h3>Interfacing between Python and Makeblock boards<a class="headerlink" href="#interfacing-between-python-and-makeblock-boards" title="Permalink to this headline">¶</a></h3>
+<p>Please see <a class="reference internal" href="communicationRpiMakeblock.html#refrpicom"><span class="std std-ref">Communication between Raspberry pi and MegaPi</span></a> .</p>
+</div>
+</div>
+<div class="section" id="realising-projects-in-ros">
+<h2>Realising projects in ROS<a class="headerlink" href="#realising-projects-in-ros" title="Permalink to this headline">¶</a></h2>
+<p>ROS Kinetic installed on the OS. If you want to develop project using ROS, please check the <a class="reference internal" href="examples.html#refexample"><span class="std std-ref">Examples</span></a> .</p>
 </div>
 </div>
 

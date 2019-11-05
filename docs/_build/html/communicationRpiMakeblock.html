@@ -17,7 +17,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Examples" href="examples.html" />
-    <link rel="prev" title="Tools &amp; Software" href="presentation.html" /> 
+    <link rel="prev" title="Tools &amp; Softwares" href="presentation.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -29,7 +29,7 @@
           <a href="examples.html" title="Examples"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="presentation.html" title="Tools &amp; Software"
+          <a href="presentation.html" title="Tools &amp; Softwares"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Makeblock-Rover-docs 0.0.1 documentation</a> &#187;</li> 
       </ul>
@@ -41,7 +41,96 @@
           <div class="body" role="main">
             
   <div class="section" id="communication-between-raspberry-pi-and-megapi">
-<h1>Communication between Raspberry pi and MegaPi<a class="headerlink" href="#communication-between-raspberry-pi-and-megapi" title="Permalink to this headline">¶</a></h1>
+<span id="refrpicom"></span><h1>Communication between Raspberry pi and MegaPi<a class="headerlink" href="#communication-between-raspberry-pi-and-megapi" title="Permalink to this headline">¶</a></h1>
+<p>This part explains you how etablish a simple comunication between Python (RPI) and Arduino C (Makeblock boards) using Pyserial
+and how works this simple communication in order to setup new capabilities.</p>
+<div class="section" id="basic-working-of-the-communication">
+<h2>Basic working of the communication<a class="headerlink" href="#basic-working-of-the-communication" title="Permalink to this headline">¶</a></h2>
+<p>First we will see how to adapt and run an example for RPI and Makeblock boards communication.</p>
+<div class="section" id="requirement">
+<h3>Requirement<a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>basic knowledge of Arduino</p></li>
+<li><p>nasic knowledge of Linux command (cd, ls, use of tab key for auto-completion)</p></li>
+</ul>
+</div>
+<div class="section" id="set-up-the-communication">
+<h3>Set-up the communication<a class="headerlink" href="#set-up-the-communication" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="arduino-configuration">
+<h4>Arduino configuration<a class="headerlink" href="#arduino-configuration" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Open <em>~/Documents/control_rover1.0/control_rover1.0.ino</em> in Arduino IDE. From ssh (see the <a class="reference internal" href="presentation.html#refssh"><span class="std std-ref">Working in SSH</span></a> topic), you can do <code class="docutils literal notranslate"><span class="pre">arduino</span> <span class="pre">control_rover1.0.ino</span></code> but it could be slow.</p></li>
+</ul>
+<p>This is the Arduino code to process what Python part are sending.</p>
+<ul class="simple">
+<li><p>Depending on the type of board you’re using, you need to modify the header file to match.</p></li>
+</ul>
+<p>For example, if you’re using a mCore. You should change <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;MeOrion.h&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">#include</span> <span class="pre">&lt;MeMCore.h&gt;</span></code> Corresponding boards and there header file are:</p>
+<p><em>Orion &lt;&gt; MeOrion.h ; BaseBoard &lt;&gt; MeBaseBoard.h ; mCore &lt;&gt; MeMCore.h ; Shield &lt;&gt; MeShield.h ; Auriga &lt;&gt; MeAuriga.h ; MegaPi &lt;&gt; MeMegaPi.h</em></p>
+<ul class="simple">
+<li><p>for the moment, you just have to change the port and objects’ name depending of your board (MeMegaPiDCMotor..). To find the good one, try motor example by clicking on File/Examples/makeblock-librairies-master</p></li>
+</ul>
+<p>but keep the sames names (motor1…).</p>
+<div class="highlight-arduino notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
+<span class="hll"><span class="cp">#include</span> <span class="cpf">&quot;MeMegaPiPro.h&quot; //Insert here your makeblock boards.</span><span class="cp"></span>
+</span>
+<span class="n">MeSmartServo</span> <span class="nf">mysmartservo</span><span class="p">(</span><span class="n">PORT5</span><span class="p">);</span>   <span class="c1">//UART2 is on port 5 //You can keep this even if you don&#39;t have the SmartServo</span>
+
+<span class="c1">//material declarations,</span>
+<span class="hll"><span class="n">MeMegaPiDCMotor</span> <span class="nf">motor1</span><span class="p">(</span><span class="n">PORT1B</span><span class="p">);</span> <span class="c1">//right front wheel</span>
+</span><span class="hll"><span class="n">MeMegaPiDCMotor</span> <span class="nf">motor2</span><span class="p">(</span><span class="n">PORT2B</span><span class="p">);</span> <span class="c1">// right back wheel</span>
+</span><span class="hll"><span class="n">MeMegaPiDCMotor</span> <span class="nf">motor3</span><span class="p">(</span><span class="n">PORT3B</span><span class="p">);</span> <span class="c1">// left front wheel</span>
+</span><span class="hll"><span class="n">MeMegaPiDCMotor</span> <span class="nf">motor4</span><span class="p">(</span><span class="n">PORT4B</span><span class="p">);</span> <span class="c1">// left back wheel</span>
+</span><span class="hll"><span class="n">MeRGBLed</span> <span class="nf">led</span><span class="p">(</span><span class="n">PORT_9</span><span class="p">);</span> <span class="c1">//You can keep this even if you don&#39;t have the module</span>
+</span></pre></div>
+</td></tr></table></div>
+<ul class="simple">
+<li><p>Connect your makeblock board at your Raspberry PI thanks to a USB-B cable and upload your code. The most harder is done ! If you have a problem don’t hesitate to create a github issue (see <a class="reference internal" href="support.html#refsupport"><span class="std std-ref">Support</span></a>)</p></li>
+</ul>
+</div>
+<div class="section" id="launch-python-arduino-communication-example">
+<h4>launch Python-Arduino communication example<a class="headerlink" href="#launch-python-arduino-communication-example" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>On a terminal :</p></li>
+</ol>
+<blockquote>
+<div><p>the <em>control_example.py</em> uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing <a href="#id1"><span class="problematic" id="id2">``</span></a>sock.connect((‘127.0.0.1’, 8001))</p>
+</div></blockquote>
+<p><a href="#id3"><span class="problematic" id="id4">``</span></a>). For this example, we just show the values in another terminal. Write :</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">nc</span> <span class="o">-</span><span class="n">l</span> <span class="mi">8001</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>On another terminal :</p></li>
+</ol>
+<ul class="simple">
+<li><p>activate <em>comRPI</em> virtual environment (see <a class="reference internal" href="presentation.html#refpyenv"><span class="std std-ref">Configure a Python virtual environment</span></a>)</p></li>
+</ul>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">comRPI</span>
+</pre></div>
+</div>
+<p>PySerial is already installed on this virtual environment moreover if you want to create another venv you can <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyserial</span></code> after activate your new venv.</p>
+<p>Check on Arduino IDE that you have the good portname. You can see the “Serial Port” entry in the Arduino “Tools” menu
+if it’s not <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>, edit control_example.py (using nano ou Gedit) and change the value of <code class="docutils literal notranslate"><span class="pre">portname</span></code> by the good one.</p>
+<ul class="simple">
+<li><p>Finaly write :</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="how-to-setup-a-new-protocol-of-communication">
+<h2>How to setup a new protocol of communication<a class="headerlink" href="#how-to-setup-a-new-protocol-of-communication" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
@@ -52,7 +141,7 @@
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="presentation.html"
-                        title="previous chapter">Tools &amp; Software</a></p>
+                        title="previous chapter">Tools &amp; Softwares</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="examples.html"
                         title="next chapter">Examples</a></p>
@@ -80,7 +169,7 @@
           <a href="examples.html" title="Examples"
              >next</a> |</li>
         <li class="right" >
-          <a href="presentation.html" title="Tools &amp; Software"
+          <a href="presentation.html" title="Tools &amp; Softwares"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Makeblock-Rover-docs 0.0.1 documentation</a> &#187;</li> 
       </ul>

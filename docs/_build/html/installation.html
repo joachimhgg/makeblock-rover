@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Structure" href="structure.html" />
+    <link rel="next" title="The Rover" href="structure.html" />
     <link rel="prev" title="Welcome to Makeblock Rover’s documentation!" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,7 +26,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="structure.html" title="Structure"
+          <a href="structure.html" title="The Rover"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to Makeblock Rover’s documentation!"
@@ -48,8 +48,9 @@
 <ul class="simple">
 <li><p>a computer with an SD slot or equivalent.</p></li>
 <li><p><strong>Raspberry Pi 2 or higher</strong> (the ISO has been testing with Raspberry Pi 3B+)</p></li>
-<li><p><strong>Makeblock board</strong> based on Arduino (MegaPi, Auriga, Orion)</p></li>
+<li><p><strong>Makeblock board</strong> based on Arduino (Orion, BaseBoard, mCore, Shield, Auriga, MegaPi)</p></li>
 <li><p><strong>8 Gb SD card minimum</strong> (but at least 16 GB is recommanded)</p></li>
+<li><p>basic knowledge of Arduino</p></li>
 </ul>
 </div>
 <div class="section" id="installation-steps">
@@ -66,8 +67,17 @@
 <div></div></blockquote>
 <ol class="arabic simple" start="3">
 <li><p>Open Balena Etcher software, select the ISO image downloaded, select your SD card and flash !</p></li>
-<li><p>You can now insert the SD card into the RPI and to start to develop robotics project !</p></li>
+<li><p>Insert the SD card into the RPI</p></li>
+<li><p>connect your keyboard, mouse and hdmi screen to your RPI and connect the power cable.</p></li>
+<li><p>Set-up your wifi (or ethernet) connection.</p></li>
+<li><p>Open a terminal and launch :</p></li>
 </ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>makeblock@makeblock:~$ sudo apt-get update
+makeblock@makeblock:~$ sudo apt-get upgrade
+</pre></div>
+</div>
+<p><strong>/!\  The password of the environnment is “mb”.</strong></p>
+<p>8.You can now start to develop robotics projects !</p>
 </div>
 </div>
 
@@ -82,7 +92,7 @@
                         title="previous chapter">Welcome to Makeblock Rover’s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="structure.html"
-                        title="next chapter">Structure</a></p>
+                        title="next chapter">The Rover</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
@@ -104,7 +114,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="structure.html" title="Structure"
+          <a href="structure.html" title="The Rover"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to Makeblock Rover’s documentation!"
