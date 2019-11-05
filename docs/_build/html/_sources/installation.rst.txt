@@ -30,6 +30,6 @@ Installation steps
   makeblock@makeblock:~$ sudo apt-get update
   makeblock@makeblock:~$ sudo apt-get upgrade
 
-**/!\\  The password of the environnment is "mb".**
+**Note:  The root password of the environnment is "mb".**
 
-8.You can now start to develop robotics projects !
+8. You can now start to develop robotics projects !
