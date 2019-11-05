@@ -121,4 +121,4 @@ Please see :ref:`refRPIcom` .
 Realising projects in ROS
 =========================
 
-ROS Kinetic installed on the OS. If you want to develop project using ROS, please check the :ref:`refExample` .
+ROS Kinetic installed on the OS. If you want to develop projects using ROS, please check the :ref:`refExample` .
