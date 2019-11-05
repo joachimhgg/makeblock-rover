@@ -104,9 +104,8 @@ and how works this simple communication in order to setup new capabilities.</p>
 <li><p>On a terminal :</p></li>
 </ol>
 <blockquote>
-<div><p>the <em>control_example.py</em> uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing <a href="#id1"><span class="problematic" id="id2">``</span></a>sock.connect((‘127.0.0.1’, 8001))</p>
+<div><p>the <em>control_example.py</em> uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing <code class="docutils literal notranslate"><span class="pre">sock.connect(('127.0.0.1',</span> <span class="pre">8001))</span></code>). For this example, we just show the values in another terminal. Write :</p>
 </div></blockquote>
-<p><a href="#id3"><span class="problematic" id="id4">``</span></a>). For this example, we just show the values in another terminal. Write :</p>
 <div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">nc</span> <span class="o">-</span><span class="n">l</span> <span class="mi">8001</span>
 </pre></div>
 </div>
@@ -125,6 +124,10 @@ if it’s not <code class="docutils literal notranslate"><span class="pre">/dev/
 <ul class="simple">
 <li><p>Finaly write :</p></li>
 </ul>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span>(comRPI) makeblock@makeblock-desktop: cd ~/Documents/RoverExamples/Python-Arduino-example
+(comRPI) makeblock@makeblock-desktop: python control_example.py
+</pre></div>
+</div>
 </div>
 </div>
 </div>
