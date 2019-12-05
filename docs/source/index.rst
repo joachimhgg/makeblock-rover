@@ -13,7 +13,7 @@ Welcome to Makeblock Rover's documentation!
 Introduction
 ############
 
-This project aims to give a ready-to-start environment for the integration of Makeblock products in Raspberry Pi projects.
+This project aims to give a ready-to-start environment for the integration of Makeblock boards in Raspberry Pi projects.
 That purpose to start quickly without the needs of losing time on installation.
 This environment is intended to be for Education with all the main packages already installed.
 
