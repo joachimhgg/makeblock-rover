@@ -74,9 +74,7 @@ If you aren’t familiar with virtual environments, please take a moment look at
 .. _this article: https://realpython.com/python-virtual-environments-a-primer/
 
 You should use virtualenvwrapper cause this package purposes simple commands to use virtual environment.
-To create an virtual environment, open a terminal (CTRL+ALT+T) and launch:
-
-.. code-block:: python
+To create an virtual environment, open a terminal (CTRL+ALT+T) and launch::
 
   mkvirtualenv myproject -p python3
 
@@ -85,21 +83,17 @@ You can (and should) name your environment(s) whatever you’d like.
 Then you can use workon, the workon command is part of the virtualenvwrapper package
 and allows us to easily activate virtual environments.
 
-.. code-block::
+::
 
   workon myproject
 
 :insert workon terminal image:
 
-and if you want to go out your environment:
-
-.. code-block::
+and if you want to go out your environment::
 
   deactivate
 
-Finaly you can install your project's packages and launch your .py file in this isolate emvironment:
-
-.. code-block::
+Finaly you can install your project's packages and launch your .py file in this isolate emvironment::
 
   (myproject) makeblock@makeblock:~ $ pip install numpy
   (myproject) makeblock@makeblock:~ $  python myprojectExample.py

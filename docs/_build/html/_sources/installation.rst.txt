@@ -23,9 +23,7 @@ Installation steps
 4. Insert the SD card into the RPI
 5. connect your keyboard, mouse and hdmi screen to your RPI and connect the power cable.
 6. Set-up your wifi (or ethernet) connection.
-7. Open a terminal and launch :
-
-.. code-block:: console
+7. Open a terminal and launch::
 
   makeblock@makeblock:~$ sudo apt-get update
   makeblock@makeblock:~$ sudo apt-get upgrade

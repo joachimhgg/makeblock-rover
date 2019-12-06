@@ -104,30 +104,34 @@ and how works this simple communication in order to setup new capabilities.</p>
 <li><p>On a terminal :</p></li>
 </ol>
 <blockquote>
-<div><p>the <em>control_example.py</em> uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing <code class="docutils literal notranslate"><span class="pre">sock.connect(('127.0.0.1',</span> <span class="pre">8001))</span></code>). For this example, we just show the values in another terminal. Write :</p>
-</div></blockquote>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nc -l 8001</span>
+<div><p>the <em>control_example.py</em> uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing <code class="docutils literal notranslate"><span class="pre">sock.connect(('127.0.0.1',</span> <span class="pre">8001))</span></code>). For this example, we just show the values in another terminal. Write:</p>
+<div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">nc</span> <span class="o">-</span><span class="n">l</span> <span class="mi">8001</span>
 </pre></div>
 </div>
+</div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>On another terminal :</p></li>
-</ol>
-<ul class="simple">
+<li><ul class="simple">
 <li><p>activate <em>comRPI</em> virtual environment (see <a class="reference internal" href="presentation.html#refpyenv"><span class="std std-ref">Configure a Python virtual environment</span></a>)</p></li>
 </ul>
+</li>
+</ol>
+<blockquote>
+<div><p>On another terminal:</p>
 <div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">comRPI</span>
 </pre></div>
 </div>
+</div></blockquote>
 <p>PySerial is already installed on this virtual environment moreover if you want to create another venv you can <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyserial</span></code> after activate your new venv.</p>
 <p>Check on Arduino IDE that you have the good portname. You can see the “Serial Port” entry in the Arduino “Tools” menu
 if it’s not <code class="docutils literal notranslate"><span class="pre">/dev/ttyUSB0</span></code>, edit control_example.py (using nano ou Gedit) and change the value of <code class="docutils literal notranslate"><span class="pre">portname</span></code> by the good one.</p>
-<ul class="simple">
-<li><p>Finaly write :</p></li>
-</ul>
+<ul>
+<li><p>Finaly write:</p>
 <div class="highlight-arduino notranslate"><div class="highlight"><pre><span></span>(comRPI) makeblock@makeblock-desktop: cd ~/Documents/RoverExamples/Python-Arduino-example
 (comRPI) makeblock@makeblock-desktop: python control_example.py
 </pre></div>
 </div>
+</li>
+</ul>
 </div>
 </div>
 </div>

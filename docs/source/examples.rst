@@ -61,7 +61,7 @@ write (use tab for autocompletion)::
   ls
 
 Like this you can see all the example coded for the Rover.
-Continue by writing ::
+Continue by writing::
 
     source ~/.profile
     workon cv

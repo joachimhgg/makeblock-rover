@@ -59,17 +59,12 @@ launch Python-Arduino communication example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. On a terminal :
-  the *control_example.py* uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing ``sock.connect(('127.0.0.1', 8001))``). For this example, we just show the values in another terminal. Write :
-
-.. code-block:: console
+  the *control_example.py* uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing ``sock.connect(('127.0.0.1', 8001))``). For this example, we just show the values in another terminal. Write::
 
    nc -l 8001
 
-2. On another terminal :
-
-* activate *comRPI* virtual environment (see :ref:`refPyenv`)
-
-.. code-block::
+2. * activate *comRPI* virtual environment (see :ref:`refPyenv`)
+ On another terminal::
 
   workon comRPI
 
@@ -78,9 +73,7 @@ PySerial is already installed on this virtual environment moreover if you want t
 Check on Arduino IDE that you have the good portname. You can see the "Serial Port" entry in the Arduino "Tools" menu
 if it's not ``/dev/ttyUSB0``, edit control_example.py (using nano ou Gedit) and change the value of ``portname`` by the good one.
 
-* Finaly write :
-
-.. code-block::
+* Finaly write::
 
   (comRPI) makeblock@makeblock-desktop: cd ~/Documents/RoverExamples/Python-Arduino-example
   (comRPI) makeblock@makeblock-desktop: python control_example.py
