@@ -45,31 +45,23 @@ press CTRL+ALT+T to open a terminal, press enter to launch a command.
 
 The different example send the information/state of the robot by sockets. So before to launch an example you have to launch a terminal to listen the port by writing :
 
-TERMINAL 1 :
-
-.. code-block:: console
+TERMINAL 1::
 
   nc -l 8001
 
-or for the Mouvement_tkinter_gui example :
-
-.. code-block::
+or for the Mouvement_tkinter_gui example::
 
   nc -l 8002
 
 then press CTRL+ALT+T to open another terminal
 TERMINAL 2 :
-write (use tab for autocompletion):
-
-.. code-block::
+write (use tab for autocompletion)::
 
   cd Documents/RoverExamples/
   ls
 
 Like this you can see all the example coded for the Rover.
-Continue by writing :
-
-.. code-block::
+Continue by writing ::
 
     source ~/.profile
     workon cv
@@ -78,8 +70,6 @@ Continue by writing :
 
 Each time you close the program, you have to listen the port again (nc -l 8001).
 
-You can see and edit the code by using gedit (as example):
-
-.. code-block::
+You can see and edit the code by using gedit (as example)::
 
   (cv) makeblock@makeblock-deskop:~/Documents/RoverExamples/ObjectLedDetection$ gedit Object_LED_detection_coordonates.py
