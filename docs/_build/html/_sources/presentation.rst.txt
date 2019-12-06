@@ -27,27 +27,19 @@ Working in SSH
 
 You can work on SSH from your linux PC. For that,
 
-1. Open a terminal on RPI and write:
-
-.. code-block::
+1. Open a terminal on RPI and write::
 
   Makeblock@makeblock:~$ hostname -I
 
 That's give you the IP of your RPI.
 
-2. open a terminal from your PC and write :
-
-.. code-block::
+2. open a terminal from your PC and write::
 
   yourPC@yourPC:~$ ssh makeblock@IPofraspberrypi
 
-or to be able to open graphics interfaces :
+or to be able to open graphics interfaces::
 
-.. code-block::
-
-    yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
-
-
+  yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
 
 Realising projects in Arduino C
 ===============================
