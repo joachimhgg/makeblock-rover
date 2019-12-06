@@ -42,7 +42,67 @@
             
   <div class="section" id="examples">
 <span id="refexample"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<p>py3cv4 environment with numpy, open-cv 3.1.1</p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Somes examples have been done to help you to start with Raspberry Pi, Ubuntu, OpenCV, ROS and Kinect360 with Makeblock boards.</p>
+<div class="section" id="cameratesting">
+<h3>CameraTesting<a class="headerlink" href="#cameratesting" title="Permalink to this headline">¶</a></h3>
+<p>[Image]</p>
+</div>
+<div class="section" id="python-arduino-example">
+<h3>Python-Arduino-example<a class="headerlink" href="#python-arduino-example" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="objectleddetection">
+<h3>ObjectLedDetection<a class="headerlink" href="#objectleddetection" title="Permalink to this headline">¶</a></h3>
+<p>[Image]</p>
+</div>
+<div class="section" id="objecttracking">
+<h3>ObjectTracking<a class="headerlink" href="#objecttracking" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="kinect360-projects">
+<h3>Kinect360_projects<a class="headerlink" href="#kinect360-projects" title="Permalink to this headline">¶</a></h3>
+<p>[Image]</p>
+</div>
+<div class="section" id="ros-examples">
+<h3>ROS examples<a class="headerlink" href="#ros-examples" title="Permalink to this headline">¶</a></h3>
+<p>[Image]
+[Image]</p>
+</div>
+</div>
+<div class="section" id="first-try">
+<h2>First try<a class="headerlink" href="#first-try" title="Permalink to this headline">¶</a></h2>
+<p>To launch the examples, follow this method :</p>
+<p>press CTRL+ALT+T to open a terminal, press enter to launch a command.</p>
+<p>The different example send the information/state of the robot by sockets. So before to launch an example you have to launch a terminal to listen the port by writing :</p>
+<p>TERMINAL 1 :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nc -l 8001</span>
+</pre></div>
+</div>
+<p>or for the Mouvement_tkinter_gui example :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">nc -l 8002</span>
+</pre></div>
+</div>
+<p>then press CTRL+ALT+T to open another terminal
+TERMINAL 2 :
+write (use tab for autocompletion):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">cd Documents/RoverExamples/</span>
+<span class="go">ls</span>
+</pre></div>
+</div>
+<p>Like this you can see all the example coded for the Rover.
+Continue by writing :</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">source ~/.profile</span>
+<span class="go">workon cv</span>
+<span class="go">cd Mouvement_tkinter_gui</span>
+<span class="go">python Mouvement_tkinter_gui.py</span>
+</pre></div>
+</div>
+<p>Each time you close the program, you have to listen the port again (nc -l 8001).</p>
+<p>You can see and edit the code by using gedit (as example):</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">(cv) makeblock@makeblock-deskop:~/Documents/RoverExamples/ObjectLedDetection$ gedit Object_LED_detection_coordonates.py</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
