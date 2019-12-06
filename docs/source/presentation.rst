@@ -76,7 +76,7 @@ If you aren’t familiar with virtual environments, please take a moment look at
 You should use virtualenvwrapper cause this package purposes simple commands to use virtual environment.
 To create an virtual environment, open a terminal (CTRL+ALT+T) and launch:
 
-.. code-block::
+.. code-block:: python
 
   mkvirtualenv myproject -p python3
 

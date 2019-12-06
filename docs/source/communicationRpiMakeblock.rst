@@ -61,7 +61,7 @@ launch Python-Arduino communication example
 1. On a terminal :
   the *control_example.py* uses sockets to send datas (providing by sensors,etc. i.e. by Arduino). Like this you can receive data in another PC (by changing ``sock.connect(('127.0.0.1', 8001))``). For this example, we just show the values in another terminal. Write :
 
-.. code-block::
+.. code-block:: console
 
    nc -l 8001
 

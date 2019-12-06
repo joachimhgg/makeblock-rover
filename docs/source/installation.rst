@@ -25,7 +25,7 @@ Installation steps
 6. Set-up your wifi (or ethernet) connection.
 7. Open a terminal and launch :
 
-.. code-block::
+.. code-block:: console
 
   makeblock@makeblock:~$ sudo apt-get update
   makeblock@makeblock:~$ sudo apt-get upgrade
