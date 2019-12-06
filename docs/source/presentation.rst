@@ -1,6 +1,9 @@
 Tools & Softwares
 *****************
 
+.. highlight:: python
+   :linenothreshold: 5
+
 In order to give you a ready-to-start RPI environment for Education, some packages has been installed to start without the needs to spend long time of installation.
 
 
@@ -51,9 +54,6 @@ Each time you want to experiment a new Makeblock sensor, you should open an Ardu
 
 Realising projects in Python
 ============================
-
-.. highlight:: python
-   :linenothreshold: 5
 
 .. _refPyenv:
 
