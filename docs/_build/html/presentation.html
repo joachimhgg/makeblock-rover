@@ -77,7 +77,7 @@
 <div><p><a class="reference external" href="mailto:yourPC&#37;&#52;&#48;yourPC">yourPC<span>&#64;</span>yourPC</a>:~$ ssh <a class="reference external" href="mailto:makeblock&#37;&#52;&#48;IPofraspberrypi">makeblock<span>&#64;</span>IPofraspberrypi</a></p>
 </div></blockquote>
 <p>or to be able to open graphics interfaces:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
 </pre></div>
 </div>
 </div>
@@ -98,13 +98,13 @@ Each time you want to experiment a new Makeblock sensor, you should open an Ardu
 If you aren’t familiar with virtual environments, please take a moment look at <a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">this article</a> on RealPython.</p>
 <p>You should use virtualenvwrapper cause this package purposes simple commands to use virtual environment.
 To create an virtual environment, open a terminal (CTRL+ALT+T) and launch:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">myproject</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkvirtualenv</span> <span class="n">myproject</span> <span class="o">-</span><span class="n">p</span> <span class="n">python3</span>
 </pre></div>
 </div>
 <p>You can (and should) name your environment(s) whatever you’d like.</p>
 <p>Then you can use workon, the workon command is part of the virtualenvwrapper package
 and allows us to easily activate virtual environments.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">myproject</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">myproject</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -112,11 +112,11 @@ and allows us to easily activate virtual environments.</p>
 <dd class="field-odd"><p></p></dd>
 </dl>
 <p>and if you want to go out your environment:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
 </pre></div>
 </div>
 <p>Finaly you can install your project’s packages and launch your .py file in this isolate emvironment:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>(myproject) makeblock@makeblock:~ $ pip install numpy
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(myproject) makeblock@makeblock:~ $ pip install numpy
 (myproject) makeblock@makeblock:~ $  python myprojectExample.py
 </pre></div>
 </div>
