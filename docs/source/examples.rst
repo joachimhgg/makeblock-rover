@@ -53,7 +53,7 @@ TERMINAL 1 :
 
 or for the Mouvement_tkinter_gui example :
 
-.. code-block:: console
+.. code-block::
 
   nc -l 8002
 
@@ -61,7 +61,7 @@ then press CTRL+ALT+T to open another terminal
 TERMINAL 2 :
 write (use tab for autocompletion):
 
-.. code-block:: console
+.. code-block::
 
   cd Documents/RoverExamples/
   ls
@@ -69,7 +69,7 @@ write (use tab for autocompletion):
 Like this you can see all the example coded for the Rover.
 Continue by writing :
 
-.. code-block:: console
+.. code-block::
 
     source ~/.profile
     workon cv
@@ -80,6 +80,6 @@ Each time you close the program, you have to listen the port again (nc -l 8001).
 
 You can see and edit the code by using gedit (as example):
 
-.. code-block:: console
+.. code-block::
 
   (cv) makeblock@makeblock-deskop:~/Documents/RoverExamples/ObjectLedDetection$ gedit Object_LED_detection_coordonates.py
