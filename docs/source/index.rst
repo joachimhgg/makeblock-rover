@@ -1,14 +1,11 @@
 .. Makeblock-Rover-docs documentation master file, created by
-   Joachim Honeggergoo on Tue Oct 29 15:16:20 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
+   Joachim Honegger on Tue Oct 29 15:16:20 2019.
 
 
 Welcome to Makeblock Rover's documentation!
 ===========================================
 
-.. image:: welcome_makeblock.jpg
+.. image:: /images/welcome_makeblock.jpg
 
 Introduction
 ############
@@ -33,3 +30,4 @@ Table of Contents
    communicationRpiMakeblock.rst
    examples.rst
    support.rst
+   links.rst

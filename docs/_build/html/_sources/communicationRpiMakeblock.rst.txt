@@ -3,7 +3,7 @@
 Communication between Raspberry pi and MegaPi
 *********************************************
 
-This part explains you how etablish a simple comunication between Python (RPI) and Arduino C (Makeblock boards) using Pyserial
+This part explains you how etablish a simple comunication between Python (RPI) and Arduino C (Makeblock boards) using PySerial
 and how works this simple communication in order to setup new capabilities.
 
 Basic working of the communication
@@ -15,7 +15,7 @@ Requirement
 -----------
 
 * basic knowledge of Arduino
-* nasic knowledge of Linux command (cd, ls, use of tab key for auto-completion)
+* basic knowledge of Linux command (cd, ls, use of tab key for auto-completion)
 
 Set-up the communication
 ------------------------
@@ -32,8 +32,7 @@ For example, if you're using a mCore. You should change ``#include <MeOrion.h>``
 
 *Orion <> MeOrion.h ; BaseBoard <> MeBaseBoard.h ; mCore <> MeMCore.h ; Shield <> MeShield.h ; Auriga <> MeAuriga.h ; MegaPi <> MeMegaPi.h*
 
-* for the moment, you just have to change the port and objects' name depending of your board (MeMegaPiDCMotor..). To find the good one, try motor example by clicking on File/Examples/makeblock-librairies-master
-but keep the sames names (motor1...).
+* for the moment, you just have to change the port and objects' name depending on your board (MeMegaPiDCMotor..). To find the good one, you can try a motor example by clicking in Arduino IDE on File/Examples/makeblock-librairies-master
 
 .. highlight:: arduino
    :linenothreshold: 5

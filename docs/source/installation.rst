@@ -9,8 +9,8 @@ Requirement
 * a computer with an SD slot or equivalent.
 * **Raspberry Pi 2 or higher** (the ISO has been testing with Raspberry Pi 3B+)
 * **Makeblock board** based on Arduino (Orion, BaseBoard, mCore, Shield, Auriga, MegaPi)
-* **8 Gb SD card minimum** (but at least 16 GB is recommanded)
-* basic knowledge of Arduino
+* **8 Gb SD card minimum** (but 16 GB is recommanded)
+* basic knowledge of Arduino and Ubuntu
 
 Installation steps
 ==================
@@ -23,10 +23,23 @@ Installation steps
 4. Insert the SD card into the RPI
 5. connect your keyboard, mouse and hdmi screen to your RPI and connect the power cable.
 6. Set-up your wifi (or ethernet) connection.
-7. Open a terminal and launch::
+
+7. Open a terminal and launch:
+
+::
+
   makeblock@makeblock:~$ sudo apt-get update
   makeblock@makeblock:~$ sudo apt-get upgrade
 
 **Note:  The root password of the environnment is "mb".**
 
+
+.. image:: /images/ro.png
+
 8. You can now start to develop robotics projects !
+
+Alternative installation
+========================
+
+If you already have your own environment and you just want to use the software, you need to download the Makeblock librairies for Arduino.
+Then, all the codes and examples are available in  

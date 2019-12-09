@@ -18,6 +18,7 @@ Tools and packages installed
 * Gedit
 * Git
 * Scratch
+* Open CV 3.1.1
 * ...
 
 .. _refSSH:
@@ -26,16 +27,18 @@ Working in SSH
 ==============
 
 You can work on SSH from your linux PC. For that,
-1. Open a terminal on RPI and write::
 
+1. Open a terminal on RPI and write:
+::
   Makeblock@makeblock:~$ hostname -I
 
 That's give you the IP of your RPI.
-2. open a terminal from your PC and write::
 
+2. open a terminal from your PC and write:
+::
   yourPC@yourPC:~$ ssh makeblock@IPofraspberrypi
 
-or to be able to open graphics interfaces::
+or to be able to open graphics interfaces (such as Arduino IDE)::
 
   yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
 
@@ -45,10 +48,12 @@ Realising projects in Arduino C
 Arduino IDE is installed with Makeblock librairies. So, you can start by code your first project using the IDE in Arduino C !
 Each time you want to experiment a new Makeblock sensor, you should open an Arduino IDE and try the examples.
 
-:insert arduino IDE image:
+.. image:: /images/arduino_gedit_example.png
 
 Realising projects in Python
 ============================
+
+.. image:: /images/gedit.png
 
 .. _refPyenv:
 
@@ -74,7 +79,7 @@ and allows us to easily activate virtual environments.
 
   workon myproject
 
-:insert workon terminal image:
+.. image:: /images/workon.png
 
 and if you want to go out your environment::
 

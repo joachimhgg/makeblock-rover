@@ -57,22 +57,23 @@
 <li><p>Gedit</p></li>
 <li><p>Git</p></li>
 <li><p>Scratch</p></li>
+<li><p>Open CV 3.1.1</p></li>
 <li><p>…</p></li>
 </ul>
 </div>
 <div class="section" id="working-in-ssh">
 <span id="refssh"></span><h2>Working in SSH<a class="headerlink" href="#working-in-ssh" title="Permalink to this headline">¶</a></h2>
-<p>You can work on SSH from your linux PC. For that,
-1. Open a terminal on RPI and write:</p>
+<p>You can work on SSH from your linux PC. For that,</p>
+<p>1. Open a terminal on RPI and write:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Makeblock@makeblock:~$ hostname -I
 </pre></div>
 </div>
-<p>That’s give you the IP of your RPI.
-2. open a terminal from your PC and write:</p>
+<p>That’s give you the IP of your RPI.</p>
+<p>2. open a terminal from your PC and write:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh makeblock@IPofraspberrypi
 </pre></div>
 </div>
-<p>or to be able to open graphics interfaces:</p>
+<p>or to be able to open graphics interfaces (such as Arduino IDE):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>yourPC@yourPC:~$ ssh -X makeblock@IPofraspberrypi
 </pre></div>
 </div>
@@ -81,13 +82,11 @@
 <h2>Realising projects in Arduino C<a class="headerlink" href="#realising-projects-in-arduino-c" title="Permalink to this headline">¶</a></h2>
 <p>Arduino IDE is installed with Makeblock librairies. So, you can start by code your first project using the IDE in Arduino C !
 Each time you want to experiment a new Makeblock sensor, you should open an Arduino IDE and try the examples.</p>
-<dl class="field-list simple">
-<dt class="field-odd">insert arduino IDE image</dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
+<img alt="_images/arduino_gedit_example.png" src="_images/arduino_gedit_example.png" />
 </div>
 <div class="section" id="realising-projects-in-python">
 <h2>Realising projects in Python<a class="headerlink" href="#realising-projects-in-python" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/gedit.png" src="_images/gedit.png" />
 <div class="section" id="configure-a-python-virtual-environment">
 <span id="refpyenv"></span><h3>Configure a Python virtual environment<a class="headerlink" href="#configure-a-python-virtual-environment" title="Permalink to this headline">¶</a></h3>
 <p>I recommend you to create a virtual environment for each python projects.
@@ -103,10 +102,7 @@ and allows us to easily activate virtual environments.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">workon</span> <span class="n">myproject</span>
 </pre></div>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">insert workon terminal image</dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
+<img alt="images/workon.png" src="images/workon.png" />
 <p>and if you want to go out your environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
 </pre></div>

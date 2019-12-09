@@ -42,33 +42,7 @@
             
   <div class="section" id="examples">
 <span id="refexample"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Somes examples have been done to help you to start with Raspberry Pi, Ubuntu, OpenCV, ROS and Kinect360 with Makeblock boards.</p>
-<div class="section" id="cameratesting">
-<h3>CameraTesting<a class="headerlink" href="#cameratesting" title="Permalink to this headline">¶</a></h3>
-<p>[Image]</p>
-</div>
-<div class="section" id="python-arduino-example">
-<h3>Python-Arduino-example<a class="headerlink" href="#python-arduino-example" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="objectleddetection">
-<h3>ObjectLedDetection<a class="headerlink" href="#objectleddetection" title="Permalink to this headline">¶</a></h3>
-<p>[Image]</p>
-</div>
-<div class="section" id="objecttracking">
-<h3>ObjectTracking<a class="headerlink" href="#objecttracking" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="kinect360-projects">
-<h3>Kinect360_projects<a class="headerlink" href="#kinect360-projects" title="Permalink to this headline">¶</a></h3>
-<p>[Image]</p>
-</div>
-<div class="section" id="ros-examples">
-<h3>ROS examples<a class="headerlink" href="#ros-examples" title="Permalink to this headline">¶</a></h3>
-<p>[Image]
-[Image]</p>
-</div>
-</div>
 <div class="section" id="first-try">
 <h2>First try<a class="headerlink" href="#first-try" title="Permalink to this headline">¶</a></h2>
 <p>To launch the examples, follow this method :</p>
@@ -84,12 +58,13 @@
 </div>
 <p>then press CTRL+ALT+T to open another terminal
 TERMINAL 2 :
-write (use tab for autocompletion):</p>
+write (don’t forget to use tab for autocompletion):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Documents</span><span class="o">/</span><span class="n">RoverExamples</span><span class="o">/</span>
 <span class="n">ls</span>
 </pre></div>
 </div>
-<p>Like this you can see all the example coded for the Rover.
+<img alt="_images/ls.png" src="_images/ls.png" />
+<p>Like this you can see all the examples coded for the Rover.
 Continue by writing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">profile</span>
 <span class="n">workon</span> <span class="n">cv</span>
@@ -101,6 +76,94 @@ Continue by writing:</p>
 <p>You can see and edit the code by using gedit (as example):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(cv) makeblock@makeblock-deskop:~/Documents/RoverExamples/ObjectLedDetection$ gedit Object_LED_detection_coordonates.py
 </pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="cameratesting">
+<h3>CameraTesting<a class="headerlink" href="#cameratesting" title="Permalink to this headline">¶</a></h3>
+<p>Go to /Documents/RoverExamples/CameraTesting and launch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">camera_testing</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<img alt="_images/CameraTesting.png" src="_images/CameraTesting.png" />
+<p>to see and edit the code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gedit</span> <span class="n">camera_testing</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-arduino-example">
+<h3>Python-Arduino-example<a class="headerlink" href="#python-arduino-example" title="Permalink to this headline">¶</a></h3>
+<p>This is one of the main example because it shows a simple communication between RPI and microcontroler.</p>
+<img alt="_images/arduino_gedit_example.png" src="_images/arduino_gedit_example.png" />
+<p>Basically, the python code is used to send a String to the Arduino code and when the Arduino code receives this String it translates the content to execute commands.
+For example, you can write <code class="docutils literal notranslate"><span class="pre">S,1,50,50.</span></code> to turn the Servo <cite>1</cite> at <cite>50</cite> degrees with a speed of <cite>50</cite> (the point . is to indicate to python code the end of the command)
+Here is the list of commands already set, but of course you will need to modify the arduino code to implement new commands depending of your needs.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Commands</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>S,1,50,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>S,2,50,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-even"><td><p>L,1,255,255,255.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>F,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-even"><td><p>B,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>R,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-even"><td><p>L,50.</p></td>
+<td><p>column 2</p></td>
+</tr>
+<tr class="row-odd"><td><ol class="upperalpha simple" start="19">
+<li></li>
+</ol>
+</td>
+<td><p>column 2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="objectleddetection">
+<h3>ObjectLedDetection<a class="headerlink" href="#objectleddetection" title="Permalink to this headline">¶</a></h3>
+<p>OpenCV example. Can returns the coordinate of an object by recognising the color of this object (Yellow in the example).
+Also, when this object is detected the LED switch on. To change the color and to purpose that the recognition adapt well to your object,
+you should take a picture of your object and launch color_detection.py with the good path of your file (As you can see bellow, change <code class="docutils literal notranslate"><span class="pre">yellow_object.JPG</span></code> )
+That will returns the HSV values that you need to write in the ObjectLedDetection.py file. the OpenCV example are based on <a class="reference external" href="https://www.instructables.com/id/Automatic-Vision-Object-Tracking/">this tutorial from Mjrovai</a>.</p>
+<img alt="_images/color_detection.png" src="_images/color_detection.png" />
+</div>
+<div class="section" id="objecttracking">
+<h3>ObjectTracking<a class="headerlink" href="#objecttracking" title="Permalink to this headline">¶</a></h3>
+<p>OpenCV example. Improving of ObjectLedDetection project. Using OpenCV, the tilt/pan camera mechanism follows the yellow ball
+and the LED switches on when an object is detected.</p>
+<img alt="images/objectTracking.png" src="images/objectTracking.png" />
+</div>
+<div class="section" id="kinect360-projects">
+<h3>Kinect360_projects<a class="headerlink" href="#kinect360-projects" title="Permalink to this headline">¶</a></h3>
+<p>Simple 3D view of the space using Kinect360 camera. For complex applications (such as visual odometry for navigation with Rviz) you will need to use Rviz, ROS… on your computer.</p>
+<img alt="_images/Kinect360.png" src="_images/Kinect360.png" />
+</div>
+<div class="section" id="ros-examples">
+<h3>ROS examples<a class="headerlink" href="#ros-examples" title="Permalink to this headline">¶</a></h3>
+<p>Purpose to work with ROS Kinetic and packages to create a camera usb web server.</p>
+<img alt="_images/ros_cam.png" src="_images/ros_cam.png" />
+<img alt="_images/ros_cam_server.png" src="_images/ros_cam_server.png" />
 </div>
 </div>
 </div>
