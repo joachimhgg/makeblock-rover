@@ -4,3 +4,7 @@ This project purpose to give a ready-to-start raspberry pi environment for Makeb
 Check the project's documentation with all contents and tutorials to start with this rover : 
 
 https://makeblock-rover.readthedocs.io
+
+To download the ready-to-start environment ISO file :
+
+https://mega.nz/#!1UVWxAKb!8bovJ9Za0s6vvbbf-nq_z94lvFL-yBgYyEpo5DTzF7w
