@@ -16,8 +16,8 @@ to ask for :ref:`refSupport`)
 Installation steps
 ==================
 
-1. Download the `ISO file`_ in the github project.
-  .. _ISO file: https://github.com/joachimhgg/makeblock-rover
+1. Download the `ISO file`_.
+  .. _ISO file: https://mega.nz/#!1UVWxAKb!8bovJ9Za0s6vvbbf-nq_z94lvFL-yBgYyEpo5DTzF7w
 2. Download `Balena Etcher`_ for Linux, Windows or macOS, a easy tool to flash ISO image on SD card.
   .. _Balena Etcher: https://www.balena.io/etcher/
 3. Open Balena Etcher software, select the ISO image downloaded, select your SD card and flash !
