@@ -10,6 +10,7 @@ First try
 
 To launch the examples, follow this method :
 
+Connect the HDMI cable, a keyboard and a mouse, then connect the alimentation.
 press CTRL+ALT+T to open a terminal, press enter to launch a command.
 
 The different example send the information/state of the robot by sockets. So before to launch an example you have to launch a terminal to listen the port by writing :

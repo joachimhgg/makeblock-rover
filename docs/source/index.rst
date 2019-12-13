@@ -5,7 +5,7 @@
 Welcome to Makeblock Rover's documentation!
 ===========================================
 
-.. image:: /images/welcome_makeblock.jpg
+.. image:: /images/rover2.jpg
 
 Introduction
 ############

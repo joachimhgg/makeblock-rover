@@ -2,7 +2,12 @@ Tools & Softwares
 *****************
 
 In order to give you a ready-to-start RPI environment for Education, some packages has been installed to start without the needs to spend long time of installation.
+To install more packages go to the `raspberry pi education website`_ or `snap store`_.
 
+
+
+.. _raspberry pi education website: https://www.raspberrypi.org/education/
+.. _snap store: https://snapcraft.io/store
 
 Tools and packages installed
 ============================
@@ -32,7 +37,7 @@ You can work on SSH from your linux PC. For that,
 ::
   Makeblock@makeblock:~$ hostname -I
 
-That's give you the IP of your RPI.
+It gives you the IP of your RPI.
 
 2. open a terminal from your PC and write:
 ::
@@ -45,7 +50,7 @@ or to be able to open graphics interfaces (such as Arduino IDE)::
 Realising projects in Arduino C
 ===============================
 
-Arduino IDE is installed with Makeblock librairies. So, you can start by code your first project using the IDE in Arduino C !
+Arduino IDE is installed with Makeblock librairies. So, you can start by coding your first project using the IDE in Arduino C!
 Each time you want to experiment a new Makeblock sensor, you should open an Arduino IDE and try the examples.
 
 .. image:: /images/arduino_gedit_example.png
@@ -65,7 +70,7 @@ If you aren’t familiar with virtual environments, please take a moment look at
 
 .. _this article: https://realpython.com/python-virtual-environments-a-primer/
 
-You should use virtualenvwrapper cause this package purposes simple commands to use virtual environment.
+You should use virtualenvwrapper as this package purposes simple commands to use virtual environment.
 To create an virtual environment, open a terminal (CTRL+ALT+T) and launch::
 
   mkvirtualenv myproject -p python3

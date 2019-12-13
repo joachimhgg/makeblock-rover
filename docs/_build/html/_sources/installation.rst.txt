@@ -1,9 +1,10 @@
 Installation
 ************
 
-To install the environment on your Raspberry Pi, it's really simple.
+To install the environment on your Raspberry Pi, it's really simple please follow the installation steps and do not hesitate
+to ask for :ref:`refSupport`)
 
-Requirement
+
 ===========
 
 * a computer with an SD slot or equivalent.
@@ -41,5 +42,5 @@ Installation steps
 Alternative installation
 ========================
 
-If you already have your own environment and you just want to use the software, you need to download the Makeblock librairies for Arduino.
-Then, all the codes and examples are available in  
+If you already have your own environment and you just want to use the projects and examples, you need to download the Makeblock librairies for Arduino.
+Then, all the codes and examples are available on Github. https://github.com/joachimhgg/makeblock-rover
