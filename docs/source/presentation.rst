@@ -53,7 +53,7 @@ Realising projects in Arduino C
 Arduino IDE is installed with Makeblock librairies. So, you can start by coding your first project using the IDE in Arduino C!
 Each time you want to experiment a new Makeblock sensor, you should open an Arduino IDE and try the examples.
 
-.. image:: /images/arduino_gedit_example.png
+.. image:: /images/arduino.png
 
 Realising projects in Python
 ============================

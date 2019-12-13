@@ -34,9 +34,6 @@ Installation steps
 
 **Note:  The root password of the environnment is "mb".**
 
-
-.. image:: /images/ro.png
-
 8. You can now start to develop robotics projects !
 
 Alternative installation

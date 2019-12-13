@@ -70,29 +70,31 @@ This is one of the main example because it shows a simple communication between 
 
 .. image:: /images/arduino_gedit_example.png
 
+.. image:: /images/pythonControlDemo.png
+
 Basically, the python code is used to send a String to the Arduino code and when the Arduino code receives this String it translates the content to execute commands.
 For example, you can write ``S,1,50,50.`` to turn the Servo `1` at `50` degrees with a speed of `50` (the point . is to indicate to python code the end of the command)
 Here is the list of commands already set, but of course you will need to modify the arduino code to implement new commands depending of your needs.
 
-+------------------+-------------+
-| Commands         | Description |
-+==================+=============+
-| S,1,50,50.       | column 2    |
-+------------------+-------------+
-| S,2,50,50.       | column 2    |
-+------------------+-------------+
-| L,1,255,255,255. | column 2    |
-+------------------+-------------+
-| F,50.            | column 2    |
-+------------------+-------------+
-| B,50.            | column 2    |
-+------------------+-------------+
-| R,50.            | column 2    |
-+------------------+-------------+
-| L,50.            | column 2    |
-+------------------+-------------+
-| S.               | column 2    |
-+------------------+-------------+
++------------------+--------------------+
+| Commands         | Description        |
++==================+====================+
+| S,1,50,50.       | Servo 1,angle,speed|
++------------------+--------------------+
+| S,2,50,50.       | Servo 2,angle,speed|
++------------------+--------------------+
+| L,1,255,255,255. | LED,1,R,V,B        |
++------------------+--------------------+
+| F,50.            | Forward,speed      |
++------------------+--------------------+
+| B,50.            | Backward,speed     |
++------------------+--------------------+
+| R,50.            | Right,speed        |
++------------------+--------------------+
+| L,50.            | Left,speed         |
++------------------+--------------------+
+| S.               | Stop               |
++------------------+--------------------+
 
 ObjectLedDetection
 ------------------
@@ -112,7 +114,7 @@ ObjectTracking
 OpenCV example. Improving of ObjectLedDetection project. Using OpenCV, the tilt/pan camera mechanism follows the yellow ball
 and the LED switches on when an object is detected.
 
-.. image:: /images/objectTracking.png
+.. image:: /images/ObjectTracking.png
 
 Kinect360_projects
 ------------------
